@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+% Layout y formato de página
+\usepackage[a4paper, lmargin=10mm, rmargin=10mm, tmargin=17mm, bmargin=30mm]{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+% Colores
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{soul}
+
+% Matemática
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[makeroom]{cancel}
+\usepackage{bbm}
+
+% Unidades del SI
+\usepackage{siunitx}
+
+% Tablas
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{makecell}
+
+% Gráficos e Imágenes
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mwe}
+
+% TikZ y CircuitiKZ
+\usepackage[american, oldvoltagedirection]{circuitikz}
+\usepackage{tikz}
+\usetikzlibrary{arrows, arrows.meta, calc, babel}
+
+% Idioma
+\usepackage[spanish, es-tabla]{babel}
+
+% Enmarcados
+\usepackage{framed}
+\usepackage{mdframed}
+
+% Texto de relleno y apéndices
+\usepackage{lipsum}
+\usepackage[toc,page]{appendix}
+
+% Listings (Listados de Código)
+\usepackage{listings}
+\lstset{
+  language=Matlab,                 % Compatible con GNU Octave / MATLAB
+  basicstyle=\ttfamily\scriptsize, % Fuente monoespaciada pequeña
+  breaklines=true,                 % Ajustar saltos de línea automáticos
+  breakatwhitespace=false,         % Permite cortar palabras largas
+  columns=fullflexible,            % Ajusta caracteres para no salirse de margen
+  keepspaces=true,                 % Mantiene espacios
+  rulecolor=\color{black!30},      % Color del marco
+  keywordstyle=\color{blue},       % Palabras clave en azul
+  commentstyle=\color{gray},       % Comentarios en gris
+  stringstyle=\color{teal},        % Cadenas de texto en verde
+  showstringspaces=false,          % No mostrar marcas en espacios
+  tabsize=2,                       % Ancho de tabulación
+  literate=                        % Mapeo de caracteres especiales para evitar errores
+    {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+    {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+    {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {°}{{\textdegree}}1 {λ}{{$\lambda$}}1
+    {ε}{{$\epsilon$}}1 {θ}{{$\theta$}}1 {Γ}{{$\Gamma$}}1
+}
+
+% Enlaces e Hipervínculos
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=green,
+    urlcolor=cyan
+}
+\urlstyle{same}
+\usepackage{dirtytalk}
+
+% Configuración de profundidad de secciones
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}

@@ -1,0 +1,257 @@
+\documentclass[10pt, aspectratio=169]{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{whale}
+
+\input{paquetes_presentacion}
+\input{comandos_presentacion}
+
+% -----------------------------------------------------------------------------
+% Datos de la Carátula / Portada
+% -----------------------------------------------------------------------------
+
+\title[Actividad 1 - Grupo 2]{
+    Sistema Wearable Low-Cost para la Seguridad y Monitoreo
+    de Trabajadores en Espacios Confinados
+}
+
+\subtitle{TC023 - Planificación de Proyectos | Actividad 1}
+
+\author[Grupo 2: de Lazzari, Lopez Ruvira, Yashnyk, Romero]{%
+    \texorpdfstring{%
+        % --- LO QUE SE VA A VER EN LA CARÁTULA (Tu código original corregido) ---
+        \hspace{0.03\textwidth}%
+        \textbf{Grupo N° 2}\\[0.1cm]
+        \begin{tabular}{@{}l@{\qquad}l@{}}
+            De Lazzari, Ezequiel        & (Padrón 115701)\\
+            Lopez Ruvira, Valentin      & (Padrón 111700)\\
+            Yashnyk, Kira               & (Padrón 111821)\\
+            Romero, Federico Martín     & (Padrón 98214)
+        \end{tabular}%
+    }{%
+        % --- LO QUE VA A LEER EL METADATO DEL PDF (Texto plano sin formato) ---
+        Grupo N° 2: De Lazzari, Lopez Ruvira, Yashnyk, Romero%
+    }%
+}
+
+\institute[FIUBA]{
+    Facultad de Ingeniería — Universidad de Buenos Aires
+}
+
+\date{X de 2026}
+
+
+\begin{document}
+
+
+% =============================================================================
+% Diapositiva 1: Carátula
+% =============================================================================
+
+\begin{frame}
+
+    \titlepage
+
+    % Logo FIUBA solamente en la primera página
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[
+            anchor=south east,
+            xshift=-0.35cm,
+            yshift=0.45cm
+        ] at (current page.south east) {
+            \includegraphics[height=0.9cm]{pics/logofiuba.png}
+        };
+    \end{tikzpicture}
+
+\end{frame}
+
+
+
+% =============================================================================
+% Diapositiva 2: Problemática
+% =============================================================================
+
+\begin{frame}{1. Problemática}
+
+    \begin{block}{Contexto}
+        Un \textbf{espacio confinado} es un recinto con entradas y salidas
+        limitadas, ventilación natural insuficiente y que no está diseñado
+        para una ocupación permanente. Los trabajadores que realizan tareas
+        en estos entornos pueden estar expuestos simultáneamente a distintos
+        riesgos.
+    \end{block}
+
+    \vspace{0.15cm}
+
+    \begin{itemize}
+
+        \item \textbf{Riesgos potenciales:}
+        exposición a gases peligrosos, atmósferas con concentración
+        insuficiente de oxígeno, temperaturas extremas, ruido,
+        caídas y otras condiciones propias de la tarea.
+
+        \vspace{0.10cm}
+
+        \item \textbf{Situación actual:}
+        el monitoreo de distintos riesgos puede requerir el uso de
+        instrumentos independientes, dificultando la obtención de
+        una visión conjunta de las condiciones de seguridad.
+
+        \vspace{0.10cm}
+
+        \item \textbf{Actores involucrados:}
+        trabajadores, responsables de Seguridad e Higiene,
+        supervisores y empresas.
+
+        \vspace{0.10cm}
+
+        \item \textbf{Restricciones:}
+        las soluciones disponibles pueden implicar múltiples
+        dispositivos, dificultando su uso simultáneo y aumentando
+        los costos de implementación.
+
+        \vspace{0.10cm}
+
+        \item \textbf{Impacto:}
+        una detección tardía de situaciones peligrosas puede aumentar
+        la probabilidad y gravedad de accidentes laborales.
+
+    \end{itemize}
+
+\end{frame}
+
+% =============================================================================
+% Diapositiva 3: Necesidad y Producto
+% =============================================================================
+
+\begin{frame}{2. Necesidad y Producto}
+
+    \begin{block}{Necesidad}
+        \large
+        \textbf{
+            Contar con una solución integrada, portátil y accesible
+            que facilite el monitoreo de las condiciones de seguridad
+            durante tareas en espacios confinados.
+        }
+    \end{block}
+
+    \vspace{0.3cm}
+
+    \begin{block}{Idea de producto}
+        \large
+        Un dispositivo \textit{wearable} de bajo costo que integre
+        el monitoreo de \textbf{variables relevantes de seguridad}
+        y permita alertar al trabajador ante situaciones
+        potencialmente peligrosas.
+    \end{block}
+
+    \vspace{0.25cm}
+
+    \begin{itemize}
+
+        \item Diseñado para acompañar al trabajador durante la tarea.
+
+        \item Busca reducir la necesidad de utilizar múltiples
+        instrumentos independientes para el monitoreo.
+
+        \item El producto se plantea inicialmente como un
+        \textbf{concepto}, sujeto a posterior análisis de factibilidad,
+        definición del escenario de uso y delimitación del alcance.
+
+    \end{itemize}
+
+\end{frame}
+
+
+% =============================================================================
+% Diapositiva 4: Macroetapas del Proyecto
+% =============================================================================
+
+\begin{frame}{3. Macroetapas del Proyecto}
+
+    \textbf{Ubicación dentro del proceso general de diseño de ingeniería}
+
+    \vspace{0.25cm}
+
+     \begin{enumerate}
+    
+        \item
+        \textbf{Diagnóstico e identificación de la problemática}
+    
+        \vspace{0.12cm}
+    
+        \item
+        \textbf{Definición de la necesidad y del producto}
+    
+        \vspace{0.12cm}
+    
+        \item
+        \textbf{Diseño y desarrollo}
+    
+        \vspace{0.12cm}
+    
+        \item
+        \textbf{Verificación y validación}
+    
+        \vspace{0.12cm}
+    
+        \item
+        \textbf{Implementación y evaluación}
+    
+    \end{enumerate}
+
+    \vspace{0.25cm}
+
+    \begin{alertblock}{Etapa actual}
+        \centering
+        \textbf{
+            Diagnóstico y definición inicial de la necesidad y del producto.
+        }
+    
+        \vspace{0.05cm}
+    
+        El grupo se encuentra delimitando la problemática,
+        el escenario de uso y el alcance inicial de la propuesta.
+    \end{alertblock}
+
+\end{frame}
+
+
+% =============================================================================
+% Diapositiva 9: Referencias Bibliográficas
+% =============================================================================
+
+\begin{frame}{Fuentes y Referencias Bibliográficas}
+
+  \begin{thebibliography}{99}
+
+    \bibitem{villamil2003}
+    Villamil García, E., \& García Hernández, M. J. (2003).
+    \textit{Introducción al Proyecto de Ingeniería}.
+    Facultad de Ingeniería, Universidad de Buenos Aires.
+
+    \vspace{0.15cm}
+
+    \bibitem{musso2026}
+    Musso Rodríguez, G. A. (2026).
+    \textit{Introducción a la Asignatura / Proceso de Diseño}.
+    Diapositivas de clase 1 y 2.
+    Departamento de Electrónica, FIUBA.
+
+    \vspace{0.15cm}
+
+    \bibitem{pmi2019}
+    Fahrenkrog, S., \& Bolles, D. (2019).
+    \textit{Guía de los Fundamentos para la Dirección de Proyectos}.
+    Project Management Institute.
+
+  \end{thebibliography}
+
+\end{frame}
+
+
+% =============================================================================
+% Fin del documento
+% =============================================================================
+
+\end{document}

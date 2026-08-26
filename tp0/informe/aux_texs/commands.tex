@@ -1,0 +1,38 @@
+% Definición de Unidades Personalizadas
+\DeclareSIUnit{\division}{div}
+
+% Macros Matemáticos Personalizados
+\newcommand{\hatv}[1]{\overset{\wedge}{\underset{\vee}{\mathstrut#1}}}
+\newcommand{\fhatv}{\hatv{f}}
+\newcommand{\Uhatv}{\hatv{U}}
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\newcommand\m[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand\bm[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand\eqn[1]{\begin{equation}#1\end{equation}}
+\newcommand\eqnn[1]{\begin{equation*}#1\end{equation*}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+% Macros de Estructura e Inserción
+\newcommand{\indice}{\tableofcontents\newpage}
+\newcommand{\cover}{\input{00_modules/03a_cover}}
+\newcommand{\redcover}{\input{00_modules/03b_redcover}}
+\newcommand\mdf[1]{\begin{mdframed}[backgroundcolor=blue!12]#1\end{mdframed}}
+
+% Redefiniciones de Estilo y Formato
+\sethlcolor{red}
+\renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% Estilo de Encabezados y Pies de Página (Fancyhdr)
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{40pt}
+
+\lhead{\footnotesize TC023 - Planificación de Proyectos - 2do. C 2026 \\ Trabajo final}
+\rhead{\includegraphics[scale=0.25]{pics/logofiuba.png}}
+
+\renewcommand{\footrulewidth}{0.5pt}
+\rfoot{\thepage}
